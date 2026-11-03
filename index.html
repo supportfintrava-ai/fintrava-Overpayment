@@ -1,0 +1,1864 @@
+
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Mortgage Overpayment Calculator UK: Save Interest & Pay Off Your Mortgage Early | Fintrava</title>
+
+  <meta name="description" content="Learn how mortgage overpayments work in the UK. Explore monthly and lump sum overpayments, interest savings, mortgage term reductions, annual allowances and early repayment charges.">
+  <meta name="keywords" content="Mortgage Overpayment Calculator, Mortgage Overpayment Calculator UK, UK Mortgage Overpayment, Mortgage Interest Savings, Mortgage Overpayment Allowance, Early Repayment Charge, Pay Off Mortgage Early">
+  <meta name="author" content="Fintrava">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <link rel="canonical" href="https://fintrava.online/uk/mortgage-overpayment-calculator/">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Mortgage Overpayment Calculator UK | Fintrava">
+  <meta property="og:description" content="Discover how mortgage overpayments could reduce your interest costs and help you become mortgage-free sooner.">
+  <meta property="og:url" content="https://fintrava.online/uk/mortgage-overpayment-calculator/">
+  <meta property="og:site_name" content="Fintrava">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#101d31">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #101d31;
+      --navy-light: #182b43;
+      --teal: #13b8a6;
+      --teal-dark: #079b8c;
+      --text: #263548;
+      --muted: #64748b;
+      --background: #f5f8fb;
+      --white: #ffffff;
+      --border: #e5ebf1;
+      --soft-teal: #e8f8f5;
+      --gold: #d7ae65;
+      --radius: 18px;
+      --shadow: 0 12px 35px rgba(16,29,49,.07);
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 95px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    a {
+      color: var(--teal-dark);
+      text-decoration: none;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    .reading-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      width: 0;
+      background: var(--teal);
+      z-index: 1000;
+    }
+
+    .topbar {
+      background: var(--navy);
+      color: #cbd5e1;
+      padding: 10px 20px;
+      text-align: center;
+      font-size: 12px;
+      letter-spacing: .5px;
+    }
+
+    .header {
+      background: rgba(255,255,255,.97);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+    }
+
+    .header-inner {
+      max-width: 1180px;
+      margin: auto;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      color: var(--navy);
+      font-family: 'Manrope', sans-serif;
+      font-size: 25px;
+      font-weight: 800;
+      letter-spacing: -1.2px;
+    }
+
+    .logo span { color: var(--teal-dark); }
+
+    .nav {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .nav a { color: var(--navy); }
+
+    .hero {
+      background:
+        radial-gradient(ellipse at 85% 20%, rgba(19,184,166,.25), transparent 38%),
+        radial-gradient(ellipse at 10% 100%, rgba(215,174,101,.13), transparent 35%),
+        linear-gradient(125deg, #101d31 0%, #172d46 58%, #123e4b 100%);
+      color: white;
+      padding: 88px 24px 92px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero-inner {
+      max-width: 1180px;
+      margin: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .breadcrumb {
+      font-size: 12px;
+      color: #b8c8d8;
+      margin-bottom: 27px;
+    }
+
+    .breadcrumb a { color: #70dfd0; }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 7px 13px;
+      border: 1px solid rgba(112,223,208,.35);
+      border-radius: 50px;
+      color: #8de4d9;
+      background: rgba(19,184,166,.10);
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      font-size: 10px;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      max-width: 850px;
+      font-family: 'Manrope', sans-serif;
+      font-size: clamp(36px, 5.5vw, 64px);
+      line-height: 1.15;
+      letter-spacing: -2px;
+      margin: 0 0 23px;
+    }
+
+    .hero h1 span { color: #61d9c9; }
+
+    .hero-description {
+      max-width: 760px;
+      color: #cbd8e5;
+      font-size: 17px;
+      line-height: 1.85;
+      margin: 0 0 30px;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+      color: #c0cedc;
+      font-size: 12px;
+    }
+
+    .hero-meta strong { color: white; }
+
+    .container {
+      max-width: 1180px;
+      padding: 0 24px;
+      margin: auto;
+    }
+
+    .main-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 290px;
+      gap: 32px;
+      align-items: start;
+      margin-top: -32px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .article {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: clamp(24px, 5vw, 55px);
+      box-shadow: var(--shadow);
+      min-width: 0;
+    }
+
+    .article h2 {
+      color: var(--navy);
+      font-family: 'Manrope', sans-serif;
+      font-size: clamp(25px, 3vw, 32px);
+      line-height: 1.35;
+      letter-spacing: -.8px;
+      margin: 54px 0 18px;
+    }
+
+    .article h2:first-of-type { margin-top: 35px; }
+
+    .article h3 {
+      color: var(--navy);
+      font-family: 'Manrope', sans-serif;
+      font-size: 20px;
+      line-height: 1.45;
+      margin: 32px 0 12px;
+    }
+
+    .article p { margin: 0 0 19px; }
+
+    .article ul, .article ol {
+      padding-left: 24px;
+      margin: 12px 0 25px;
+    }
+
+    .article li { padding-left: 5px; margin-bottom: 9px; }
+
+    .intro {
+      font-size: 18px;
+      color: #43546a;
+      line-height: 1.9;
+    }
+
+    .highlight {
+      background: var(--soft-teal);
+      border-left: 4px solid var(--teal);
+      padding: 22px 25px;
+      border-radius: 0 12px 12px 0;
+      margin: 27px 0;
+    }
+
+    .highlight strong { color: #087f73; }
+
+    .warning {
+      background: #fff8ed;
+      border-left: 4px solid #d7a34b;
+      padding: 22px 25px;
+      border-radius: 0 12px 12px 0;
+      margin: 25px 0;
+    }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 13px;
+      margin: 25px 0;
+    }
+
+    .stat {
+      background: #f5f8fb;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 14px;
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--navy);
+      font-family: 'Manrope', sans-serif;
+      font-size: 24px;
+      margin-bottom: 4px;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin: 25px 0;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    table {
+      width: 100%;
+      min-width: 500px;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    th {
+      background: var(--navy);
+      color: white;
+      text-align: left;
+      padding: 15px;
+      font-weight: 600;
+    }
+
+    td {
+      padding: 14px 15px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    tr:last-child td { border-bottom: 0; }
+
+    tbody tr:nth-child(even) { background: #f7fafc; }
+
+    .formula {
+      background: var(--navy);
+      color: #dce8f2;
+      border-radius: 13px;
+      padding: 23px;
+      margin: 25px 0;
+      overflow-x: auto;
+    }
+
+    .formula code {
+      color: #77e2d3;
+      font-size: 14px;
+      white-space: normal;
+      overflow-wrap: anywhere;
+    }
+
+    .step-list {
+      counter-reset: step;
+      list-style: none;
+      padding: 0 !important;
+    }
+
+    .step-list li {
+      counter-increment: step;
+      position: relative;
+      padding: 0 0 23px 55px;
+      margin-bottom: 17px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .step-list li::before {
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 37px;
+      height: 37px;
+      border-radius: 11px;
+      background: var(--soft-teal);
+      color: var(--teal-dark);
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+    }
+
+    .toc {
+      position: sticky;
+      top: 100px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .toc h3 {
+      margin: 0 0 17px;
+      color: var(--navy);
+      font-family: 'Manrope', sans-serif;
+      font-size: 16px;
+    }
+
+    .toc ol {
+      padding-left: 20px;
+      margin: 0;
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    .toc li { margin-bottom: 10px; }
+
+    .toc a { color: #506177; }
+
+    .faq {
+      border-bottom: 1px solid var(--border);
+      padding: 19px 0;
+    }
+
+    .faq summary {
+      color: var(--navy);
+      font-weight: 700;
+      cursor: pointer;
+      list-style: none;
+      padding-right: 25px;
+      position: relative;
+    }
+
+    .faq summary::-webkit-details-marker { display: none; }
+
+    .faq summary::after {
+      content: '+';
+      position: absolute;
+      right: 0;
+      top: -3px;
+      color: var(--teal-dark);
+      font-size: 23px;
+    }
+
+    .faq[open] summary::after { content: '−'; }
+
+    .faq p {
+      color: #566579;
+      margin: 13px 0 0;
+    }
+
+    .sources {
+      background: #f5f8fb;
+      padding: 23px;
+      border-radius: 13px;
+      margin-top: 35px;
+    }
+
+    .sources h3 { margin-top: 0; }
+
+    .sources li { overflow-wrap: anywhere; }
+
+    .disclaimer {
+      font-size: 13px;
+      color: #65758a;
+      background: #f1f5f9;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 35px;
+    }
+
+    .footer {
+      margin-top: 75px;
+      padding: 45px 24px;
+      background: var(--navy);
+      color: #b7c6d6;
+      text-align: center;
+    }
+
+    .footer .logo { color: white; }
+
+    .footer p {
+      font-size: 12px;
+      max-width: 650px;
+      margin: 12px auto;
+    }
+
+    .footer a { color: #72dfd1; }
+
+    @media (max-width: 900px) {
+      .main-layout { grid-template-columns: 1fr; }
+      .toc { position: static; grid-row: 1; }
+      .toc ol {
+        columns: 2;
+        column-gap: 30px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      body { font-size: 15px; }
+      .header-inner { padding: 13px 17px; }
+      .nav { display: none; }
+      .hero { padding: 60px 20px 75px; }
+      .hero-description { font-size: 15px; }
+      .container { padding: 0 13px; }
+      .article { padding: 23px 19px; }
+      .stat-grid { grid-template-columns: 1fr; }
+      .stat { padding: 15px; }
+      .toc ol { columns: 1; }
+      .hero-meta { gap: 10px 17px; }
+      .article h2 { margin-top: 43px; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://fintrava.online/#organization",
+        "name": "Fintrava",
+        "url": "https://fintrava.online/"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://fintrava.online/#website",
+        "url": "https://fintrava.online/",
+        "name": "Fintrava",
+        "publisher": {
+          "@id": "https://fintrava.online/#organization"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://fintrava.online/uk/mortgage-overpayment-calculator/#webpage",
+        "url": "https://fintrava.online/uk/mortgage-overpayment-calculator/",
+        "name": "Mortgage Overpayment Calculator UK",
+        "isPartOf": {
+          "@id": "https://fintrava.online/#website"
+        },
+        "description": "A detailed guide to UK mortgage overpayments, interest savings, repayment options and early repayment charges."
+      },
+      {
+        "@type": "Article",
+        "headline": "Mortgage Overpayment Calculator UK: How to Save Interest and Pay Off Your Mortgage Early",
+        "description": "Understand UK mortgage overpayments, lump sums, monthly payments, interest savings, annual allowances and early repayment charges.",
+        "mainEntityOfPage": {
+          "@id": "https://fintrava.online/uk/mortgage-overpayment-calculator/#webpage"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "Fintrava"
+        },
+        "publisher": {
+          "@id": "https://fintrava.online/#organization"
+        },
+        "inLanguage": "en-GB",
+        "about": {
+          "@type": "Thing",
+          "name": "UK mortgage overpayments"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://fintrava.online/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "UK",
+            "item": "https://fintrava.online/uk/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Mortgage Overpayment Calculator",
+            "item": "https://fintrava.online/uk/mortgage-overpayment-calculator/"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is a mortgage overpayment?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A mortgage overpayment is an additional payment made on top of your normal mortgage repayment. It can reduce the outstanding mortgage balance and the interest charged on that balance."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I overpay my UK mortgage by 10% every year?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Not necessarily. Some lenders allow up to 10% annual overpayments on certain fixed-rate mortgages, but the allowance, calculation method and reset date depend on the mortgage product."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does overpaying a mortgage reduce interest?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Generally, yes. An overpayment reduces the outstanding capital balance, which can reduce the interest charged in future periods."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is it better to reduce the mortgage term or monthly payments?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Reducing the mortgage term while maintaining the regular payment will generally produce greater interest savings than reducing monthly payments, assuming the same balance, rate and overpayment."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is an Early Repayment Charge?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "An Early Repayment Charge is a fee that may apply when you repay more than your mortgage agreement permits during a specified period."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I make a one-off mortgage overpayment?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Many mortgage providers allow one-off lump sum overpayments, subject to the terms and conditions of the mortgage."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+  <div class="reading-progress" id="readingProgress"></div>
+
+  <div class="topbar">
+    SMART FINANCIAL TOOLS &nbsp; | &nbsp; CLEARER FINANCIAL DECISIONS
+  </div>
+
+  <header class="header">
+    <div class="header-inner">
+      <a href="https://fintrava.online/" class="logo">fintrava<span>.</span></a>
+
+      <nav class="nav" aria-label="Main navigation">
+        <a href="https://fintrava.online/">Home</a>
+        <a href="https://fintrava.online/uk/">UK Finance</a>
+        <a href="#guide">Mortgage Guide</a>
+        <a href="#faqs">FAQs</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+
+      <div class="breadcrumb">
+        <a href="https://fintrava.online/">Home</a>
+        &nbsp; / &nbsp;
+        <a href="https://fintrava.online/uk/">UK Finance</a>
+        &nbsp; / &nbsp;
+        Mortgage Overpayment
+      </div>
+
+      <span class="eyebrow">UK Mortgage Finance Guide</span>
+
+      <h1>Mortgage Overpayment <span>Calculator UK</span></h1>
+
+      <p class="hero-description">
+        Discover how making extra mortgage payments could reduce your
+        interest costs, shorten your mortgage term and help you become
+        mortgage-free sooner. Understand monthly overpayments, lump sums,
+        annual allowances and early repayment charges in the UK.
+      </p>
+
+      <div class="hero-meta">
+        <span>By <strong>Fintrava</strong></span>
+        <span>Financial Education</span>
+        <span>UK Mortgage Guide</span>
+        <span>Updated: November 2026</span>
+      </div>
+
+    </div>
+  </section>
+
+  <main class="container" id="guide">
+
+    <div class="main-layout">
+
+      <article class="article">
+
+        <p class="intro">
+          Your mortgage may be one of the largest financial commitments
+          you will ever make. But what happens if you pay a little more
+          than your required monthly repayment? Could an additional
+          £50, £100 or £200 each month save thousands of pounds in
+          interest over time?
+        </p>
+
+        <p>
+          A <strong>Mortgage Overpayment Calculator UK</strong> helps
+          homeowners estimate how additional mortgage payments could
+          affect their outstanding balance, total interest cost and
+          remaining mortgage term.
+        </p>
+
+        <p>
+          Instead of relying on guesswork, you can compare different
+          overpayment strategies and understand the potential financial
+          impact before contacting your mortgage provider.
+        </p>
+
+        <div class="highlight">
+          <strong>Key principle:</strong> An overpayment generally reduces
+          your outstanding mortgage capital. Since interest is calculated
+          on the amount you still owe, reducing the balance can reduce
+          future interest costs.
+        </div>
+
+        <h2 id="what-is-overpayment">
+          1. What Is a Mortgage Overpayment?
+        </h2>
+
+        <p>
+          A mortgage overpayment is an additional amount you pay towards
+          your mortgage beyond your agreed contractual repayment.
+          Your normal monthly repayment continues, while the extra
+          amount is used to reduce your outstanding mortgage debt,
+          subject to your lender's rules.
+        </p>
+
+        <p>
+          For example, imagine your contractual monthly mortgage
+          repayment is £1,000. If you decide to pay an extra £100,
+          your total payment for that month becomes £1,100.
+        </p>
+
+        <p>
+          The additional £100 can reduce the capital you owe. Future
+          interest may then be calculated on a lower mortgage balance.
+          Over a long repayment period, this can create a compounding
+          financial benefit.
+        </p>
+
+        <h3>Why does reducing the mortgage balance matter?</h3>
+
+        <ul>
+          <li>You may pay less interest over the remaining mortgage term.</li>
+          <li>You may be able to repay your mortgage earlier.</li>
+          <li>Your outstanding loan balance decreases faster.</li>
+          <li>Your loan-to-value ratio may improve as your debt falls,
+              assuming the property value remains unchanged.</li>
+          <li>You may have more financial flexibility when considering
+              a future remortgage.</li>
+        </ul>
+
+        <h2 id="how-it-works">
+          2. How Does Mortgage Overpayment Work in the UK?
+        </h2>
+
+        <p>
+          Most repayment mortgages consist of two components:
+          principal (capital) and interest. Your regular monthly
+          repayment covers the interest due and gradually repays
+          the original amount borrowed.
+        </p>
+
+        <p>
+          During the early years of a typical repayment mortgage,
+          a larger proportion of each payment may go towards interest.
+          As the outstanding balance decreases, the interest
+          component generally falls and a greater proportion of
+          your repayment goes towards reducing the principal.
+        </p>
+
+        <p>
+          An overpayment can accelerate this process by reducing
+          the outstanding balance earlier than scheduled.
+        </p>
+
+        <h3>Simple example</h3>
+
+        <p>Suppose you have the following mortgage:</p>
+
+        <div class="table-wrap">
+          <table>
+            <tbody>
+              <tr><td>Outstanding mortgage balance</td><td><strong>£200,000</strong></td></tr>
+              <tr><td>Annual interest rate</td><td>5%</td></tr>
+              <tr><td>Remaining mortgage term</td><td>25 years</td></tr>
+              <tr><td>Extra monthly payment</td><td>£100</td></tr>
+              <tr><td>Mortgage type</td><td>Repayment</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          By making an additional £100 payment each month, you reduce
+          the principal faster than you would through your normal
+          contractual repayment alone.
+        </p>
+
+        <p>
+          The actual interest savings and reduction in mortgage term
+          depend on the payment timing, interest calculation method,
+          lender rules and whether your interest rate changes.
+          Use a calculator based on your actual mortgage figures
+          for an estimate.
+        </p>
+
+        <h2 id="types">
+          3. Types of Mortgage Overpayments
+        </h2>
+
+        <p>
+          There are two common ways to make additional mortgage
+          repayments: regular monthly overpayments and one-off
+          lump sum overpayments.
+        </p>
+
+        <h3>A. Monthly mortgage overpayments</h3>
+
+        <p>
+          A monthly overpayment means paying a fixed extra amount
+          every month alongside your normal mortgage repayment.
+        </p>
+
+        <p>
+          For example, you could pay an extra £50, £100 or £200
+          every month. If you maintain the additional payment
+          consistently, it can progressively reduce your
+          outstanding mortgage balance.
+        </p>
+
+        <p>Monthly overpayments may suit people who:</p>
+
+        <ul>
+          <li>Have a stable monthly income.</li>
+          <li>Receive a regular salary.</li>
+          <li>Have money left after essential expenses.</li>
+          <li>Want a consistent mortgage repayment strategy.</li>
+        </ul>
+
+        <h3>B. One-off lump sum overpayments</h3>
+
+        <p>
+          A lump sum overpayment is an additional payment made
+          in one transaction rather than through regular monthly
+          payments.
+        </p>
+
+        <p>For example, you might use part of:</p>
+
+        <ul>
+          <li>An annual work bonus.</li>
+          <li>Extra business income.</li>
+          <li>Cash savings beyond your emergency reserve.</li>
+          <li>A financial gift or inheritance.</li>
+        </ul>
+
+        <p>
+          A lump sum can reduce your mortgage balance immediately
+          once the lender applies the payment. Earlier reductions
+          in the balance may reduce interest over more subsequent
+          payment periods.
+        </p>
+
+        <h3>Monthly vs lump sum overpayment</h3>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Monthly</th>
+                <th>Lump Sum</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Payment method</td>
+                <td>Regular extra payment</td>
+                <td>One-off payment</td>
+              </tr>
+              <tr>
+                <td>Frequency</td>
+                <td>Every month</td>
+                <td>When funds are available</td>
+              </tr>
+              <tr>
+                <td>Suitable for</td>
+                <td>Regular surplus income</td>
+                <td>Bonuses and savings</td>
+              </tr>
+              <tr>
+                <td>Effect on balance</td>
+                <td>Gradual reduction</td>
+                <td>Immediate reduction when applied</td>
+              </tr>
+              <tr>
+                <td>Potential interest saving</td>
+                <td>Yes</td>
+                <td>Yes</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="calculator">
+          4. How to Use a Mortgage Overpayment Calculator
+        </h2>
+
+        <p>
+          A mortgage overpayment calculator estimates what could
+          happen if you pay more than your required mortgage
+          repayment. It compares a normal repayment schedule
+          against a schedule that includes additional payments.
+        </p>
+
+        <p>
+          To get a meaningful estimate, you need to enter accurate
+          information about your existing mortgage.
+        </p>
+
+        <h3>Information you will typically need</h3>
+
+        <ol class="step-list">
+          <li>
+            <strong>Outstanding mortgage balance</strong><br>
+            Enter the amount of mortgage capital you currently owe,
+            not necessarily the original amount you borrowed.
+          </li>
+          <li>
+            <strong>Remaining mortgage term</strong><br>
+            Enter the number of years and months left until the
+            scheduled end of your mortgage.
+          </li>
+          <li>
+            <strong>Current interest rate</strong><br>
+            Enter your current annual mortgage interest rate.
+            For example, 4.5%, 5% or 5.5%.
+          </li>
+          <li>
+            <strong>Regular monthly overpayment</strong><br>
+            Enter the additional amount you intend to pay each
+            month, on top of your contractual repayment.
+          </li>
+          <li>
+            <strong>One-off lump sum</strong><br>
+            If applicable, enter the extra amount you plan to
+            pay as a single payment.
+          </li>
+          <li>
+            <strong>Overpayment strategy</strong><br>
+            Compare the impact of maintaining your monthly
+            payment to reduce the term versus recalculating
+            your monthly payment over the existing term.
+          </li>
+        </ol>
+
+        <h3>What should your results show?</h3>
+
+        <p>A useful mortgage overpayment calculation should compare:</p>
+
+        <ul>
+          <li>Original monthly mortgage repayment.</li>
+          <li>New total monthly payment including overpayments.</li>
+          <li>Outstanding mortgage balance after overpayments.</li>
+          <li>Total interest without overpayments.</li>
+          <li>Estimated interest with overpayments.</li>
+          <li>Potential interest saved.</li>
+          <li>Original and estimated new mortgage payoff dates.</li>
+          <li>Estimated time saved in years and months.</li>
+          <li>Year-by-year mortgage balance and interest breakdown.</li>
+        </ul>
+
+        <div class="highlight">
+          A calculator provides an estimate based on its assumptions.
+          It does not replace your lender's personalised mortgage
+          illustration or an official repayment quotation.
+        </div>
+
+        <h2 id="interest-savings">
+          5. How Much Interest Can You Save by Overpaying?
+        </h2>
+
+        <p>
+          The amount of interest you can potentially save depends
+          on several factors:
+        </p>
+
+        <ul>
+          <li>Your outstanding mortgage balance.</li>
+          <li>Your current mortgage interest rate.</li>
+          <li>The remaining mortgage term.</li>
+          <li>The amount of each additional payment.</li>
+          <li>How early you make the overpayment.</li>
+          <li>Whether your interest rate changes in the future.</li>
+        </ul>
+
+        <p>
+          Generally, a larger overpayment made earlier in the
+          mortgage term can produce greater interest savings
+          because the outstanding balance is reduced sooner.
+        </p>
+
+        <h3>Real UK mortgage illustration</h3>
+
+        <p>
+          MoneyHelper provides an example involving a £250,000
+          mortgage at 5% interest with 25 years remaining.
+          A £5,000 lump sum overpayment in that example reduces
+          the interest by approximately £11,970 and shortens
+          the repayment period by 11 months.
+        </p>
+
+        <div class="stat-grid">
+          <div class="stat">
+            <strong>£250,000</strong>
+            <span>Illustrative mortgage balance</span>
+          </div>
+          <div class="stat">
+            <strong>£5,000</strong>
+            <span>One-off overpayment</span>
+          </div>
+          <div class="stat">
+            <strong>£11,970</strong>
+            <span>Illustrative interest reduction</span>
+          </div>
+        </div>
+
+        <p>
+          These figures are a published illustration, not a
+          guaranteed result for every mortgage. Your outcome
+          will depend on the precise payment and interest
+          calculation assumptions.
+        </p>
+
+        <p>
+          Source:
+          <a href="https://www.moneyhelper.org.uk/en/homes/buying-a-home/should-you-pay-off-your-mortgage-early"
+             target="_blank" rel="noopener noreferrer">
+            MoneyHelper: Should you pay off your mortgage early?
+          </a>
+        </p>
+
+        <h2 id="term-vs-payment">
+          6. Reduce Mortgage Term vs Reduce Monthly Payments
+        </h2>
+
+        <p>
+          One of the most important decisions when making mortgage
+          overpayments is how the lender applies the reduction
+          in your outstanding balance.
+        </p>
+
+        <p>
+          Depending on your mortgage product and lender, you may
+          be able to choose between reducing the remaining
+          mortgage term or reducing your monthly repayments.
+        </p>
+
+        <h3>Option 1: Reduce the mortgage term</h3>
+
+        <p>
+          Under this strategy, you continue paying approximately
+          the same regular monthly repayment while your mortgage
+          balance decreases faster.
+        </p>
+
+        <p>
+          Because you maintain the higher repayment rather than
+          using the lower balance to reduce your payment, you
+          can potentially clear the mortgage earlier and save
+          more interest.
+        </p>
+
+        <h3>Option 2: Reduce monthly payments</h3>
+
+        <p>
+          Under this strategy, the lender may recalculate your
+          regular monthly repayment based on the reduced
+          mortgage balance and the existing remaining term.
+        </p>
+
+        <p>
+          Your monthly financial commitment may become lower,
+          which can improve your cash flow. However, keeping
+          the original mortgage term may result in lower
+          overall interest savings than shortening the term.
+        </p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Comparison</th>
+                <th>Reduce Term</th>
+                <th>Reduce Payment</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Monthly payment</td>
+                <td>Generally maintained</td>
+                <td>May decrease</td>
+              </tr>
+              <tr>
+                <td>Mortgage end date</td>
+                <td>Earlier</td>
+                <td>Usually unchanged</td>
+              </tr>
+              <tr>
+                <td>Interest savings</td>
+                <td>Generally greater</td>
+                <td>Potentially lower</td>
+              </tr>
+              <tr>
+                <td>Monthly cash flow</td>
+                <td>Less immediate relief</td>
+                <td>More immediate relief</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="highlight">
+          If your main objective is to become mortgage-free sooner,
+          reducing the mortgage term while maintaining your regular
+          payment is often the more effective strategy, provided
+          you can comfortably afford the payments.
+        </div>
+
+        <p>
+          Do not assume your lender automatically shortens the
+          mortgage term after an overpayment. Ask how the payment
+          will be applied and whether you need to request a
+          term reduction.
+        </p>
+
+        <h2 id="allowance">
+          7. UK Mortgage Overpayment Allowance: How Much Can You Pay?
+        </h2>
+
+        <p>
+          UK mortgage overpayment rules depend on your mortgage
+          agreement and lender. Some mortgage products allow
+          additional payments up to a specified annual allowance
+          without an Early Repayment Charge (ERC).
+        </p>
+
+        <p>
+          A commonly encountered allowance is 10% per year
+          for certain fixed-rate mortgage products. However,
+          this is not a universal UK mortgage rule.
+        </p>
+
+        <h3>How a 10% allowance might work</h3>
+
+        <p>
+          Imagine a lender allows you to overpay up to 10% of
+          a specified mortgage balance during a particular
+          allowance period.
+        </p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Illustrative balance</th>
+                <th>10% illustration</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>£100,000</td><td>£10,000</td></tr>
+              <tr><td>£150,000</td><td>£15,000</td></tr>
+              <tr><td>£200,000</td><td>£20,000</td></tr>
+              <tr><td>£250,000</td><td>£25,000</td></tr>
+              <tr><td>£300,000</td><td>£30,000</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          These are mathematical illustrations only. They do not
+          confirm the allowance available on any particular
+          mortgage account.
+        </p>
+
+        <h3>What you should check with your lender</h3>
+
+        <ul>
+          <li>Whether your mortgage has an annual overpayment allowance.</li>
+          <li>Whether the allowance is based on the original or
+              outstanding mortgage balance.</li>
+          <li>Whether it resets on a calendar year, account
+              anniversary or fixed-rate anniversary.</li>
+          <li>Whether regular and lump sum overpayments share
+              the same allowance.</li>
+          <li>Whether unused allowance can be carried forward.</li>
+          <li>What happens when you exceed the permitted amount.</li>
+        </ul>
+
+        <p>
+          For example, HSBC explains that its fixed-rate
+          mortgage allowance and reset arrangements depend
+          on its product conditions. Santander also publishes
+          its own product-specific rules.
+        </p>
+
+        <p>
+          Official lender information:
+          <a href="https://www.hsbc.co.uk/mortgages/mortgage-overpayment-calculator/"
+             target="_blank" rel="noopener noreferrer">HSBC UK</a>
+          and
+          <a href="https://www.santander.co.uk/personal/mortgages/existing-customers/mortgage-overpayments"
+             target="_blank" rel="noopener noreferrer">Santander UK</a>.
+        </p>
+
+        <h2 id="erc">
+          8. What Is an Early Repayment Charge (ERC)?
+        </h2>
+
+        <p>
+          An Early Repayment Charge is a fee that may be payable
+          if you repay more than your mortgage agreement permits
+          during a specified period.
+        </p>
+
+        <p>
+          For example, a fixed-rate mortgage may allow additional
+          repayments up to a certain annual limit. If you exceed
+          that limit, an ERC may apply to the amount that goes
+          beyond the permitted allowance.
+        </p>
+
+        <p>
+          An ERC may also apply when you repay your mortgage
+          in full or leave a mortgage product before the
+          relevant deal period ends.
+        </p>
+
+        <h3>How can an ERC affect your savings?</h3>
+
+        <p>
+          Imagine your estimated interest saving from an
+          overpayment is £2,000. If a lender imposes a £500
+          charge, your net benefit would be lower.
+        </p>
+
+        <div class="formula">
+          <strong>Illustrative calculation</strong>
+          <p>
+            <code>Net Benefit = Estimated Interest Saved - ERC - Other Applicable Fees</code>
+          </p>
+          <p>
+            <code>£2,000 - £500 = £1,500</code>
+          </p>
+        </div>
+
+        <p>
+          This is a simplified example. An actual ERC depends
+          on your mortgage agreement, the amount repaid and
+          the applicable charging period.
+        </p>
+
+        <div class="warning">
+          <strong>Important:</strong> Before making a large
+          overpayment, check your mortgage offer and contact
+          your lender. Do not assume that the 10% allowance
+          applies to your mortgage.
+        </div>
+
+        <h2 id="calculation">
+          9. How Is Mortgage Overpayment Interest Calculated?
+        </h2>
+
+        <p>
+          A standard repayment mortgage calculation uses the
+          mortgage principal, interest rate and remaining
+          number of repayment periods to estimate the regular
+          monthly repayment.
+        </p>
+
+        <p>
+          A simplified monthly repayment formula is:
+        </p>
+
+        <div class="formula">
+          <p><strong>Monthly repayment formula</strong></p>
+          <code>
+            M = P × r × (1 + r)<sup>n</sup>
+            / [(1 + r)<sup>n</sup> - 1]
+          </code>
+          <p>Where:</p>
+          <ul>
+            <li><code>M</code> = monthly mortgage repayment</li>
+            <li><code>P</code> = outstanding mortgage principal</li>
+            <li><code>r</code> = monthly interest rate</li>
+            <li><code>n</code> = remaining number of monthly payments</li>
+          </ul>
+        </div>
+
+        <p>
+          To convert an annual nominal interest rate into a
+          monthly rate for this simplified model, divide the
+          annual rate by 12.
+        </p>
+
+        <p>
+          For example, an annual rate of 5% becomes approximately
+          0.4167% per month in this model.
+        </p>
+
+        <h3>Monthly balance calculation</h3>
+
+        <p>
+          A simplified monthly amortisation calculation can
+          be expressed as:
+        </p>
+
+        <div class="formula">
+          <code>
+            Monthly Interest = Opening Balance × Monthly Rate
+          </code>
+          <br><br>
+          <code>
+            Closing Balance = Opening Balance
+            + Monthly Interest
+            - Total Payment
+          </code>
+        </div>
+
+        <p>
+          When an overpayment is made, the total payment includes
+          the normal contractual repayment plus the extra amount.
+          The outstanding balance therefore decreases faster.
+        </p>
+
+        <p>
+          Real lender calculations may use daily interest,
+          different payment dates, rounding rules and changing
+          interest rates. The simplified monthly model is
+          therefore an estimate, not an exact lender statement.
+        </p>
+
+        <h2 id="worked-example">
+          10. Worked Example: Monthly Mortgage Overpayments
+        </h2>
+
+        <p>
+          Consider an illustrative repayment mortgage with
+          the following details:
+        </p>
+
+        <div class="table-wrap">
+          <table>
+            <tbody>
+              <tr><td>Mortgage balance</td><td>£200,000</td></tr>
+              <tr><td>Interest rate</td><td>5% per year</td></tr>
+              <tr><td>Remaining term</td><td>25 years</td></tr>
+              <tr><td>Mortgage type</td><td>Repayment</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          Now consider three possible monthly overpayment
+          strategies: £50, £100 and £200.
+        </p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Strategy</th>
+                <th>Extra per month</th>
+                <th>Total extra per year</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Option A</td><td>£50</td><td>£600</td></tr>
+              <tr><td>Option B</td><td>£100</td><td>£1,200</td></tr>
+              <tr><td>Option C</td><td>£200</td><td>£2,400</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          The larger the regular overpayment, the faster the
+          outstanding capital can fall, assuming payments
+          are maintained and no other terms change.
+        </p>
+
+        <p>
+          However, the exact interest savings and payoff dates
+          must be calculated using a consistent amortisation
+          schedule. A comparison should not mix different
+          interest-rate assumptions or payment dates.
+        </p>
+
+        <h2 id="when-to-overpay">
+          11. When Does Overpaying Your Mortgage Make Sense?
+        </h2>
+
+        <p>
+          Overpaying can be useful when it fits your overall
+          financial position. It should not be treated as
+          automatically better than every other use of money.
+        </p>
+
+        <h3>Situations where overpayment may be worth considering</h3>
+
+        <ul>
+          <li>You have sufficient emergency savings.</li>
+          <li>You have no higher-interest debt that should
+              be prioritised first.</li>
+          <li>Your mortgage allows additional repayments
+              without substantial charges.</li>
+          <li>You can afford the extra payments without
+              creating monthly financial pressure.</li>
+          <li>You want to reduce long-term borrowing costs.</li>
+          <li>You value reducing your debt and gaining
+              greater financial security.</li>
+        </ul>
+
+        <h2 id="when-not-to-overpay">
+          12. When Should You Avoid Overpaying?
+        </h2>
+
+        <p>
+          Mortgage overpayments are not suitable for every
+          homeowner. Paying extra towards a mortgage can
+          reduce your accessible cash reserves.
+        </p>
+
+        <h3>Consider these situations before making an overpayment</h3>
+
+        <ul>
+          <li>
+            <strong>You have no emergency fund:</strong>
+            Unexpected expenses can force you to borrow
+            at higher rates.
+          </li>
+          <li>
+            <strong>You have expensive unsecured debt:</strong>
+            Credit cards and other high-interest debts may
+            deserve priority.
+          </li>
+          <li>
+            <strong>You may need the money soon:</strong>
+            Mortgage overpayments are not always reversible.
+          </li>
+          <li>
+            <strong>Your mortgage has an ERC:</strong>
+            A charge could reduce or eliminate the financial
+            benefit of overpaying.
+          </li>
+          <li>
+            <strong>You have other financial priorities:</strong>
+            Pension contributions, essential spending and
+            short-term savings may need attention first.
+          </li>
+        </ul>
+
+        <div class="warning">
+          MoneyHelper suggests keeping enough savings to cover
+          at least three months of essential expenses before
+          using surplus money to repay a mortgage early.
+          Your own required reserve may be higher depending
+          on your circumstances.
+        </div>
+
+        <h2 id="interest-only">
+          13. Can You Overpay an Interest-Only Mortgage?
+        </h2>
+
+        <p>
+          Yes. Some UK lenders allow additional repayments
+          on interest-only mortgages, subject to the
+          mortgage product's conditions.
+        </p>
+
+        <p>
+          An interest-only mortgage generally requires you
+          to pay interest during the mortgage term, while
+          the original principal remains due at the end.
+        </p>
+
+        <p>
+          An overpayment can reduce the outstanding capital
+          that must eventually be repaid. However, the
+          payment arrangement and any impact on monthly
+          payments or the mortgage term depend on your lender.
+        </p>
+
+        <p>
+          Check your lender's rules and make sure you have
+          a suitable plan to repay the remaining capital
+          by the end of the mortgage.
+        </p>
+
+        <h2 id="decision">
+          14. Mortgage Overpayment vs Keeping Money in Savings
+        </h2>
+
+        <p>
+          Another important financial decision is whether
+          to overpay your mortgage or keep the additional
+          money in a savings account.
+        </p>
+
+        <p>
+          You should compare the effective mortgage interest
+          cost with the after-tax savings return, while
+          considering access to cash and the risks involved.
+        </p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Factor</th>
+                <th>Mortgage Overpayment</th>
+                <th>Savings Account</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Primary purpose</td>
+                <td>Reduce mortgage debt</td>
+                <td>Build accessible savings</td>
+              </tr>
+              <tr>
+                <td>Interest impact</td>
+                <td>Potential mortgage interest saving</td>
+                <td>Earn savings interest</td>
+              </tr>
+              <tr>
+                <td>Access to money</td>
+                <td>May be restricted</td>
+                <td>Depends on account terms</td>
+              </tr>
+              <tr>
+                <td>Potential charges</td>
+                <td>ERC may apply</td>
+                <td>Withdrawal conditions may apply</td>
+              </tr>
+              <tr>
+                <td>Main consideration</td>
+                <td>Debt reduction</td>
+                <td>Liquidity and return</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          The better choice depends on your mortgage rate,
+          savings interest rate, tax position, emergency
+          savings and mortgage restrictions. Compare the
+          actual figures rather than relying on a general rule.
+        </p>
+
+        <h2 id="checklist">
+          15. Checklist Before Making a Mortgage Overpayment
+        </h2>
+
+        <p>
+          Before sending additional money to your mortgage
+          provider, work through this checklist:
+        </p>
+
+        <ul>
+          <li>Check your current outstanding mortgage balance.</li>
+          <li>Confirm your current interest rate and deal expiry date.</li>
+          <li>Check your annual overpayment allowance.</li>
+          <li>Confirm the allowance calculation and reset date.</li>
+          <li>Ask whether an ERC applies to your planned payment.</li>
+          <li>Confirm how the lender applies your overpayment.</li>
+          <li>Decide whether you want to reduce the term or payments.</li>
+          <li>Maintain an appropriate emergency fund.</li>
+          <li>Compare overpayment with other financial priorities.</li>
+          <li>Keep written confirmation of any payment instructions.</li>
+        </ul>
+
+        <h2 id="faqs">16. Frequently Asked Questions</h2>
+
+        <div class="faq">
+          <details>
+            <summary>What is a mortgage overpayment calculator?</summary>
+            <p>
+              A mortgage overpayment calculator estimates how
+              additional payments could reduce your mortgage
+              balance, total interest and remaining repayment
+              period.
+            </p>
+          </details>
+
+          <details>
+            <summary>Is overpaying a mortgage worth it in the UK?</summary>
+            <p>
+              It can be worthwhile if the potential interest
+              savings outweigh applicable charges and other
+              financial priorities. The answer depends on
+              your mortgage rate, savings, debts and lender
+              conditions.
+            </p>
+          </details>
+
+          <details>
+            <summary>Can I overpay my UK mortgage by 10% every year?</summary>
+            <p>
+              Not necessarily. Some mortgage products permit
+              10% annual overpayments, but limits, calculation
+              methods and reset dates vary. Check your
+              individual mortgage agreement.
+            </p>
+          </details>
+
+          <details>
+            <summary>Does overpaying my mortgage reduce interest?</summary>
+            <p>
+              Generally, yes. An overpayment reduces the
+              outstanding capital balance, which can lower
+              the interest charged on the remaining debt.
+            </p>
+          </details>
+
+          <details>
+            <summary>Can I overpay my mortgage every month?</summary>
+            <p>
+              Many lenders allow regular monthly overpayments.
+              However, you must check the allowance and
+              payment conditions applicable to your product.
+            </p>
+          </details>
+
+          <details>
+            <summary>Is a lump sum mortgage overpayment better?</summary>
+            <p>
+              A lump sum reduces the balance when it is
+              applied. A regular monthly overpayment reduces
+              the balance gradually. Which strategy produces
+              a better result depends on the amount, timing
+              and available cash.
+            </p>
+          </details>
+
+          <details>
+            <summary>Does overpaying reduce my mortgage term automatically?</summary>
+            <p>
+              Not always. Some lenders maintain the existing
+              mortgage term and recalculate the monthly
+              payment. Ask your lender whether a term
+              reduction needs to be requested.
+            </p>
+          </details>
+
+          <details>
+            <summary>What happens if I exceed my mortgage overpayment allowance?</summary>
+            <p>
+              Your lender may charge an Early Repayment
+              Charge on the amount exceeding the permitted
+              allowance. The exact conditions are set out
+              in your mortgage agreement.
+            </p>
+          </details>
+
+          <details>
+            <summary>Can I overpay a fixed-rate mortgage?</summary>
+            <p>
+              Many fixed-rate mortgage products allow
+              overpayments within a specified annual
+              allowance. Additional charges may apply
+              if you exceed that allowance.
+            </p>
+          </details>
+
+          <details>
+            <summary>Can I overpay an interest-only mortgage?</summary>
+            <p>
+              Some lenders permit it. The overpayment can
+              reduce the outstanding principal, but you
+              should confirm how the lender applies the
+              payment and how you will repay the remaining
+              balance.
+            </p>
+          </details>
+
+          <details>
+            <summary>Are mortgage overpayment calculator results exact?</summary>
+            <p>
+              No. Online calculators generally use
+              assumptions about interest rates, payment
+              frequency and timing. Actual lender figures
+              may differ.
+            </p>
+          </details>
+
+          <details>
+            <summary>Should I overpay my mortgage or invest the money?</summary>
+            <p>
+              Compare the potential mortgage interest
+              saving with the expected after-tax investment
+              return, while accounting for investment risk,
+              liquidity, fees and your personal circumstances.
+              Investment returns are not guaranteed.
+            </p>
+          </details>
+        </div>
+
+        <h2 id="conclusion">17. Final Thoughts</h2>
+
+        <p>
+          Mortgage overpayments can be an effective way to
+          reduce outstanding debt, potentially lower future
+          interest costs and shorten the time required to
+          repay a mortgage.
+        </p>
+
+        <p>
+          However, the best strategy is not simply to pay
+          as much as possible. It is to understand your
+          mortgage terms, preserve sufficient accessible
+          savings and choose an overpayment amount that
+          fits your financial situation.
+        </p>
+
+        <p>
+          Use accurate mortgage figures, compare different
+          repayment scenarios and confirm your lender's
+          allowance and charges before making a payment.
+        </p>
+
+        <div class="highlight">
+          <strong>Make informed financial decisions with Fintrava.</strong>
+          Understand your mortgage numbers before committing
+          your money to an additional repayment.
+        </div>
+
+        <div class="sources">
+          <h3>Official UK mortgage resources</h3>
+          <p>
+            Use the following sources to verify lender-specific
+            conditions and understand mortgage overpayments.
+          </p>
+          <ul>
+            <li>
+              <a href="https://www.moneyhelper.org.uk/en/homes/buying-a-home/should-you-pay-off-your-mortgage-early"
+                 target="_blank" rel="noopener noreferrer">
+                MoneyHelper: Should you pay off your mortgage early?
+              </a>
+            </li>
+            <li>
+              <a href="https://www.nationwide.co.uk/mortgages/mortgage-calculators/overpayment-calculator"
+                 target="_blank" rel="noopener noreferrer">
+                Nationwide: Mortgage Overpayment Calculator
+              </a>
+            </li>
+            <li>
+              <a href="https://www.hsbc.co.uk/mortgages/mortgage-overpayment-calculator/"
+                 target="_blank" rel="noopener noreferrer">
+                HSBC UK: Mortgage Overpayment Calculator
+              </a>
+            </li>
+            <li>
+              <a href="https://www.santander.co.uk/personal/mortgages/existing-customers/mortgage-overpayments"
+                 target="_blank" rel="noopener noreferrer">
+                Santander UK: Mortgage Overpayments
+              </a>
+            </li>
+            <li>
+              <a href="https://www.moneysavingexpert.com/mortgages/mortgage-overpayment-calculator/"
+                 target="_blank" rel="noopener noreferrer">
+                MoneySavingExpert: Mortgage Overpayment Calculator
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="disclaimer">
+          <strong>Financial disclaimer:</strong>
+          This content is provided by Fintrava for general
+          educational and informational purposes only. It
+          does not constitute financial, mortgage, tax or
+          investment advice. All calculations and examples
+          are illustrative and are not guaranteed.
+          Actual outcomes depend on your mortgage agreement,
+          lender calculation methods, payment timing,
+          interest rate changes, applicable charges and
+          individual circumstances. Always check with your
+          mortgage provider or a suitably qualified
+          professional before making financial decisions.
+
+          <br><br>
+
+          Your home may be repossessed if you do not keep
+          up repayments on your mortgage.
+        </div>
+
+      </article>
+
+      <aside class="toc" aria-label="Article contents">
+        <h3>In This Guide</h3>
+        <ol>
+          <li><a href="#what-is-overpayment">What Is Overpayment?</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#types">Types of Overpayments</a></li>
+          <li><a href="#calculator">Using a Calculator</a></li>
+          <li><a href="#interest-savings">Interest Savings</a></li>
+          <li><a href="#term-vs-payment">Term vs Payments</a></li>
+          <li><a href="#allowance">UK Allowance</a></li>
+          <li><a href="#erc">Early Repayment Charges</a></li>
+          <li><a href="#calculation">Calculation Formula</a></li>
+          <li><a href="#worked-example">Worked Example</a></li>
+          <li><a href="#when-to-overpay">When to Overpay</a></li>
+          <li><a href="#when-not-to-overpay">When Not to Overpay</a></li>
+          <li><a href="#interest-only">Interest-Only Mortgages</a></li>
+          <li><a href="#decision">Overpayment vs Savings</a></li>
+          <li><a href="#checklist">Prepayment Checklist</a></li>
+          <li><a href="#faqs">FAQs</a></li>
+          <li><a href="#conclusion">Final Thoughts</a></li>
+        </ol>
+      </aside>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <a href="https://fintrava.online/" class="logo">
+      fintrava<span>.</span>
+    </a>
+
+    <p>
+      Fintrava helps people understand financial decisions
+      through practical tools, clear explanations and
+      accessible financial information.
+    </p>
+
+    <p>
+      <a href="https://fintrava.online/">Home</a>
+      &nbsp; | &nbsp;
+      <a href="https://fintrava.online/uk/">UK Finance</a>
+    </p>
+
+    <p>© 2026 Fintrava. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Reading progress indicator
+    window.addEventListener('scroll', function () {
+      const scrollable =
+        document.documentElement.scrollHeight - window.innerHeight;
+
+      const progress =
+        scrollable > 0
+          ? (window.scrollY / scrollable) * 100
+          : 0;
+
+      document.getElementById('readingProgress')
+        .style.width = progress + '%';
+    });
+  </script>
+
+</body>
+</html>
